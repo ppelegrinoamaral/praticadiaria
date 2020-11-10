@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Calculadora</h1>
+        <section id="soma">
+            <input type="number" id="primeiroElementoSoma">
+            +
+            <input type="number" id="segundoElementoSoma">
+            <input type="button" value="Calcula" onclick="soma()">
+        </section>
+        <br>
+        <section id="subtracao">
+            <input type="number" id="primeiroElementoSubtracao">
+            -
+            <input type="number" id="segundoElementoSubtracao">
+            <input type="button" value="Calcula" onclick="subtrai()">
+        </section>
+
+    <script>
+        function soma(a, b) {
+            var a = document.getElementById('primeiroElementoSoma');
+            var b = document.getElementById('segundoElementoSoma');
+            var resultado = parseInt(a.value) + parseInt(b.value);
+            alert(resultado);
+        }
+
+        function subtrai(c, d) {
+            var c = document.getElementById('primeiroElementoSubtracao');
+            var d = document.getElementById('segundoElementoSubtracao');
+            var resultado = parseInt(c.value) - parseInt(d.value);
+            alert(resultado);
+        }
+    </script>
+
+    <style>
+        .soma {
+            margin: 10px; 
+        }
+    </style> 
+</body>

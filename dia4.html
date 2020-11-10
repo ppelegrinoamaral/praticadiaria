@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+
+ <head>
+     <meta charset="UTF-8">
+ </head>
+
+ <body>
+     <h1>Calculadora</h1>
+        <input type="number" id="firstElement">
+        <select name="operator" id="operator">
+            <option value="+">Soma</option>
+            <option value="-">Subtrai</option>
+            <option value="*">Multiplica</option>
+            <option value="/">Divide</option>
+        </select>
+        <input type="number" id="secondElement">
+        <input type="button" value="Calcula" onclick="checkNumber()">
+
+     <script>
+        function conta(a,b) {
+            var a = document.getElementById('firstElement');
+            var b = document.getElementById('secondElement');
+            var oper = document.getElementById('operator');
+            var val = oper.options[oper.selectedIndex].value;
+
+            console.log(val);
+
+            if (val == "+") {
+                alert(parseInt(a.value) + parseInt(b.value));
+            } else if (val == "-") {
+                alert(parseInt(a.value) - parseInt(b.value));
+            } else if (val == "*") {
+                alert(parseInt(a.value) * parseInt(b.value));
+            } else if (val == "/") {
+                alert(parseInt(a.value) / parseInt(b.value));
+                }
+            }
+        
+        function checkNumber() {
+            if (firstElement.value == 0 || secondElement.value == 0) {
+                alert("Número deve ser diferente de 0");            
+            } else {
+                conta();
+            }
+        }
+    </script>
+ </body>
